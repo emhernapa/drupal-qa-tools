@@ -20,21 +20,33 @@ Ideal for integrating as a development dependency in multiple Drupal projects vi
 1. Add the repository to your `composer.json`:
 
 ```json
-"repositories": [
-  {
-    "type": "vcs",
-    "url": "https://github.com/emhernapa/drupal-qa-tools"
-  }
-]
+"repositories": {
+    "drupal-qa-tools": {
+        "type": "vcs",
+        "url": "https://github.com/emhernapa/drupal-qa-tools"
+    }
+}
 ```
 
-2. Require it as a development dependency:
+2. Add the following scripts to create the config files to your `composer.json`:
+
+```json
+"scripts": {
+      "post-install-cmd": [
+          "cp ./vendor/emhernapa/drupal-qa-tools/config/phpstan.neon phpstan.neon",
+          "cp ./vendor/emhernapa/drupal-qa-tools/config/phpmd.xml phpmd.xml",
+          "cp ./vendor/emhernapa/drupal-qa-tools/config/phpcs.xml phpcs.xml"
+      ]
+  }
+```
+
+3. Require it as a development dependency:
 
 ```bash
 composer require emhernapa/drupal-qa-tools --dev
 ```
 
-3. (Optional) Copy the configuration files to your project root:
+4. (Optional) Copy the configuration files to your project root:
 
 ```bash
 cp vendor/emhernapa/drupal-qa-tools/config/phpstan.neon .

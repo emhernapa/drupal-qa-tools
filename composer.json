@@ -1,0 +1,22 @@
+{
+  "name": "emhernapa/drupal-qa-tools",
+  "description": "Quality assurance tools for Drupal projects: PHPStan, PHPMD, PHPCS, and Drupal coding standards.",
+  "type": "library",
+  "license": "MIT",
+  "require-dev": {
+    "phpstan/phpstan": "^1.10",
+    "phpmd/phpmd": "^2.14",
+    "squizlabs/php_codesniffer": "^3.7",
+    "drupal/coder": "^8.3"
+  },
+  "extra": {
+    "composer-exit-on-patch-failure": true
+  },
+  "autoload": {
+    "psr-4": {
+      "DrupalQaTools\\": "src/"
+    }
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true
+}

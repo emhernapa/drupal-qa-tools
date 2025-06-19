@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset name="QA">
+  <description>QA PHPcs Ruleset</description>
+  <!-- Standards. -->
+  <rule ref="./vendor/drupal/coder/coder_sniffer/Drupal"/>
+  <rule ref="./vendor/drupal/coder/coder_sniffer/DrupalPractice"/>
+  <!-- Arguments. -->
+  <arg name="extensions" value="php,module,inc,theme,profile,install,yml"/>
+  <arg name="report" value="full"/>
+  <arg name="colors"/>
+  <arg value="p"/>
+  <!-- Files to check. -->
+  <file>./web/modules/custom</file>
+  <file>./web/themes/custom</file>
+  <!-- Exclude patterns. -->
+  <exclude-pattern>vendor/</exclude-pattern>
+  <exclude-pattern>web/</exclude-pattern>
+  <exclude-pattern>config/</exclude-pattern>
+  <exclude-pattern>*.min.css</exclude-pattern>
+  <exclude-pattern>*.min.js</exclude-pattern>
+  <!-- Add your custom rules after this line. -->
+</ruleset>

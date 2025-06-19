@@ -4,26 +4,31 @@
   "type": "library",
   "license": "MIT",
   "require-dev": {
-    "phpstan/phpstan": "^1.10",
-    "phpmd/phpmd": "^2.14",
-    "squizlabs/php_codesniffer": "^3.7",
-    "drupal/coder": "^8.3"
+      "phpstan/phpstan": "^1.10",
+      "phpmd/phpmd": "^2.14",
+      "squizlabs/php_codesniffer": "^3.7",
+      "drupal/coder": "^8.3"
   },
   "extra": {
-    "composer-exit-on-patch-failure": true
+      "composer-exit-on-patch-failure": true
   },
   "autoload": {
-    "psr-4": {
-      "DrupalQaTools\\": "src/"
-    }
+      "psr-4": {
+          "DrupalQaTools\\": "src/"
+      }
   },
   "minimum-stability": "stable",
   "prefer-stable": true,
   "scripts": {
       "post-install-cmd": [
-          "cp vendor/emhernapa/drupal-qa-tools/config/phpstan.neon phpstan.neon",
-          "cp vendor/emhernapa/drupal-qa-tools/config/phpmd.xml phpmd.xml",
-          "cp vendor/emhernapa/drupal-qa-tools/config/phpcs.xml phpcs.xml"
+          "cp ./vendor/emhernapa/drupal-qa-tools/config/phpstan.neon phpstan.neon",
+          "cp ./vendor/emhernapa/drupal-qa-tools/config/phpmd.xml phpmd.xml",
+          "cp ./vendor/emhernapa/drupal-qa-tools/config/phpcs.xml phpcs.xml"
       ]
+  },
+  "config": {
+      "allow-plugins": {
+          "dealerdirect/phpcodesniffer-composer-installer": true
+      }
   }
 }

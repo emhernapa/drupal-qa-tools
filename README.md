@@ -49,9 +49,9 @@ composer require emhernapa/drupal-qa-tools --dev
 4. (Optional) Copy the configuration files to your project root:
 
 ```bash
-cp vendor/emhernapa/drupal-qa-tools/config/phpstan.neon .
-cp vendor/emhernapa/drupal-qa-tools/config/phpmd.xml .
-cp vendor/emhernapa/drupal-qa-tools/config/phpcs.xml .
+cp ./vendor/emhernapa/drupal-qa-tools/config/phpstan.neon .
+cp ./vendor/emhernapa/drupal-qa-tools/config/phpmd.xml .
+cp ./vendor/emhernapa/drupal-qa-tools/config/phpcs.xml .
 ```
 
 ---
@@ -60,17 +60,17 @@ cp vendor/emhernapa/drupal-qa-tools/config/phpcs.xml .
 
 - **PHPStan**:
   ```bash
-  vendor/bin/phpstan analyse
+  ./vendor/bin/phpstan analyse
   ```
 
 - **PHPMD**:
   ```bash
-  vendor/bin/phpmd web/modules/custom xml phpmd.xml
+  ./vendor/bin/phpmd web/modules/custom xml phpmd.xml
   ```
 
 - **PHPCS**:
   ```bash
-  vendor/bin/phpcs
+  ./vendor/bin/phpcs
   ```
 
 ---

@@ -19,13 +19,6 @@
   },
   "minimum-stability": "stable",
   "prefer-stable": true,
-  "scripts": {
-      "post-install-cmd": [
-          "cp ./vendor/emhernapa/drupal-qa-tools/config/phpstan.neon phpstan.neon",
-          "cp ./vendor/emhernapa/drupal-qa-tools/config/phpmd.xml phpmd.xml",
-          "cp ./vendor/emhernapa/drupal-qa-tools/config/phpcs.xml phpcs.xml"
-      ]
-  },
   "config": {
       "allow-plugins": {
           "dealerdirect/phpcodesniffer-composer-installer": true

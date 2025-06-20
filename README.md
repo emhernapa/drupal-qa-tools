@@ -71,21 +71,27 @@ cp ./vendor/emhernapa/drupal-qa-tools/config/phpmd.xml .
 - **PHPCS**:
   ```bash
   ./vendor/bin/phpcs
+  ```
   OR
+  ```bash
   composer test-phpcs
   ```
 
 - **PHPStan**:
   ```bash
   ./vendor/bin/phpstan analyse
+  ```
   OR
+  ```bash
   composer test-phpstan
   ```
 
 - **PHPMD**:
   ```bash
   ./vendor/bin/phpmd web/modules/custom xml phpmd.xml
+  ```
   OR
+  ```bash
   composer test-phpmd
   ```
 
